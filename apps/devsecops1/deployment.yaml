@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devsecops1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devsecops1
+  template:
+    metadata:
+      labels:
+        app: devsecops1
+    spec:
+      containers:
+      - name: devsecops1
+        image: ghcr.io/hakim-hub10/devsecops1:latest
+        ports:
+        - containerPort: 80

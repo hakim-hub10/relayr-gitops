@@ -17,3 +17,9 @@ spec:
 
   syncPolicy:
     automated: {}
+
+
+metadata:
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: devsecops1=ghcr.io/hakim-hub10/devsecops1
+    argocd-image-updater.argoproj.io/update-strategy: latest

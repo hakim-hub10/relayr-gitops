@@ -3,8 +3,10 @@ kind: Ingress
 metadata:
   name: devsecops1
 spec:
+  ingressClassName: nginx
   rules:
-  - http:
+  - host: devsecops.nexapointit.com
+    http:
       paths:
       - path: /
         pathType: Prefix
